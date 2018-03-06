@@ -10,16 +10,24 @@
 body, html {
   color: var(--text-color);
   background-color: var(--bg-color);
-
+  background-image: url('background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   /*Declare your font*/
-  font-family: serif;
+  font-family: 'Rokkitt', serif;
+}
+
+@font-face {
+  font-family: 'Circus';
+  src: url('Circus.ttf');
 }
 
 /*choose your type heirarchy*/
 h1,h2,h3,h4 {font-weight: 700;}
-h1 {font-size: 3rem;}
+h1 {font-size: 4rem;font-family:'Circus'}
 h2 {font-size: 2rem;}
-h3 {font-size: 1rem;}
+h3 {font-size: 2rem;font-family:'Circus'}
 h4 {font-size: 1rem;}
 
 b {font-weight: 700;}
@@ -35,6 +43,28 @@ a {color: var(--link-color)}
   margin-bottom: 2rem;
 }
 
+/* .content {
+ background-color: rgba(255,255,255,0.5);
+} */
+
+.col-12{
+margin: 0 auto;
+text-align: center;
+}
+
+.faded{
+  background-color: rgba(255,255,255,0.5);
+}
+
+.mcp{
+  text-align: center;
+  font-size: 2rem;
+}
+
+.centered {
+  text-align: center;
+}
+
 .col-1 {
   flex-grow: 2;
   flex-shrink: 2;
@@ -48,6 +78,7 @@ a {color: var(--link-color)}
 }
 
 
+
 /*Header*/
 
 header .container {
@@ -57,12 +88,41 @@ header .container {
 
 /*content*/
 
-.bio {flex-direction: column;}
+.bio {flex-direction: column; background-color: rgba(255,255,255,0.5);}
 .bio p, .bio ul li {margin-bottom: 1rem;}
 
 ul.jobs li {
-  padding-right: 2rem;
   margin-bottom: 2rem;
+}
+.jobs{
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+.align-right{
+  text-align: right;
+  align-items: flex-end;
+}
+
+.job-item{
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(255,255,255,0.5);
+
+}
+
+.less-width{
+  width: 70%;
+}
+
+.more-padded {
+  padding: 2rem;
+}
+
+.padded{
+  padding: 1rem;
 }
 
 /*footer*/
